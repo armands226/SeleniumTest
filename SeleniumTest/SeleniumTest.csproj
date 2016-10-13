@@ -92,28 +92,41 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Bindings\RadioButtonBindings.cs" />
     <Compile Include="Bindings\InitialTestBindings.cs" />
     <Compile Include="Browsers.cs" />
-    <Compile Include="Features\InitialTest.feature.cs">
+    <Compile Include="Features\BicycleClaimsForm\InitialTest.feature.cs">
+      <DependentUpon>InitialTest.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>InitialTest.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\BicycleClaimsForm\WhatHasHappened.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhatHasHappened.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
+    <Compile Include="PageObjects\BicycleClaimPage.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\PleaseGiveTHePersonalDetailsSection\PleaseGiveThePersonalDetailsSection.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhatHappendRadioButtons.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhatHasHappenedSection.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatItemTheLossConcernsSection\WhatItemTheLossConcernsSection.cs" />
     <Compile Include="TestConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\InitialTest.feature">
+    <None Include="Features\BicycleClaimsForm\InitialTest.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InitialTest.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\BicycleClaimsForm\WhatHasHappened.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WhatHasHappened.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PageObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Drivers\chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
