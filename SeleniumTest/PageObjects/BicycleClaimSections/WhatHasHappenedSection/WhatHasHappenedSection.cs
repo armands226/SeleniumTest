@@ -33,5 +33,22 @@ namespace SeleniumTest.PageObjects.BicycleClaimSections.WhatHasHappenedSection
                 return new WhatHappendRadioButtons(_driver);
             }
         }
+        public WhenDidTheIncidentHappen WhenDidTheIncidentHappen
+        {
+            get
+            {
+                //var element = _driver.FindElement(_whatHasHappenedSection);
+                return new WhenDidTheIncidentHappen(_driver);
+            }
+        }
+
+        public WhereDidTheIncidentHappen WhereDidTheIncidentHappen
+        {
+            get
+            {
+                //var element = _driver.FindElement(_whatHasHappenedSection);
+                return new WhereDidTheIncidentHappen(_driver);
+            }
+        }
     }
 }

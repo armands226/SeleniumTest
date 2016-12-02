@@ -6,8 +6,7 @@ using TechTalk.SpecFlow;
 
 namespace SeleniumTest.Bindings
 {
-    [Binding]
-    public sealed class RadioButtonBindings
+    [Binding]    public sealed class RadioButtonBindings
     {
 
         [When(@"I click ""(.*)"" radio button")]

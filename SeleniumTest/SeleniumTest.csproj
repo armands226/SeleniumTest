@@ -74,8 +74,12 @@
       <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.0.1\lib\net40\WebDriver.Support.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -94,7 +98,13 @@
   <ItemGroup>
     <Compile Include="Bindings\RadioButtonBindings.cs" />
     <Compile Include="Bindings\InitialTestBindings.cs" />
+    <Compile Include="Bindings\WhatHasHappenedSteps.cs" />
     <Compile Include="Browsers.cs" />
+    <Compile Include="Features\BicycleClaimsForm\CreateBicycle Claim.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateBicycle Claim.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\BicycleClaimsForm\InitialTest.feature.cs">
       <DependentUpon>InitialTest.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -106,16 +116,23 @@
       <DependentUpon>WhatHasHappened.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
+    <Compile Include="Models\WhatHasHappenedModel.cs" />
     <Compile Include="PageObjects\BicycleClaimPage.cs" />
     <Compile Include="PageObjects\BicycleClaimSections\PleaseGiveTHePersonalDetailsSection\PleaseGiveThePersonalDetailsSection.cs" />
     <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhatHappendRadioButtons.cs" />
     <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhatHasHappenedSection.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhenDidTheIncidentHappen.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhereDidTheIncidentHappen.cs" />
     <Compile Include="PageObjects\BicycleClaimSections\WhatItemTheLossConcernsSection\WhatItemTheLossConcernsSection.cs" />
     <Compile Include="TestConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\BicycleClaimsForm\CreateBicycle Claim.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateBicycle Claim.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\BicycleClaimsForm\InitialTest.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InitialTest.feature.cs</LastGenOutput>
